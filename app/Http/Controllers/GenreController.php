@@ -10,6 +10,6 @@ class GenreController extends Controller
     {
         $genres = Genre::all();
 
-        return view('genres.index', ['genres' => $genres]);
+        return view('genres', ['genres' => $genres]);
     }
 }
