@@ -10,6 +10,10 @@ class BookController extends Controller
     {
         $books = Book::all();
 
-        return view('books', ['books' => $books]);
+        return response()->json([
+            'success' => true,
+            'message' => 'Daftar data book',
+            'data' => $books,
+        ]);
     }
 }
